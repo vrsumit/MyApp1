@@ -1,0 +1,147 @@
+<div class="container col-md-6 col-sm-6 border p-3 mt-2rem bg-light mb-1rem">
+    <div>
+        <h3 class="text-center header-blue"> Text Book Order </h3>
+    </div>
+    <form [formGroup]="textbookOrderForm">
+        <div class="form-group">
+            <label for="parishName" >Parish Name</label>
+            <input type="text" formControlName="parishName" class="form-control form-control-sm" placeholder="Enter Parish Name">
+        </div>
+
+        <div class="form-group ">
+            <label for="parishAddress" >Parish Address</label>
+            <input type="text" formControlName="parishAddress" class="form-control form-control-sm" placeholder="Enter Parish Address">
+        </div>
+
+        <div class="form-group ">
+            <label for="principalName" >Name of Parish Principal</label>
+            <input type="text" formControlName="principalName" class="form-control form-control-sm" placeholder="Enter Name of Parish Principal">
+        </div>
+
+        <div class="form-group ">
+            <label for="principalContact" >Principal's Contact Number</label>
+            <input type="number" formControlName="principalContact" class="form-control form-control-sm" placeholder="Enter Principal's Contact Number">
+        </div>
+
+        <div class="form-group ">
+            <label for="contactName" >Contact Name</label>
+            <input type="text" formControlName="contactName" class="form-control form-control-sm" placeholder="Enter Contact Name">
+        </div>
+
+        <div class="form-group ">
+            <label for="shippingAddr" >Shipping Address</label>
+            <input type="text" formControlName="shippingAddr" class="form-control form-control-sm" placeholder="Enter Address Where books will be shipped.">
+        </div>
+
+        <div class="form-group ">
+            <label for="contactEmail" >Contact's Email Address</label>
+            <input type="email" formControlName="contactEmail" class="form-control form-control-sm" placeholder="Enter Contact Email Address">
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="contactPhone" >Contact's Phone Number</label>
+                <input type="number" formControlName="contactPhone" class="form-control form-control-sm" pattern="\d{10}" placeholder="Enter Contact Phone Number">
+            </div>
+            <div class="form-group col">
+                <label for="alternatePhone" >Alternate Phone Number</label>
+                <input type="number" formControlName="alternatePhone" class="form-control form-control-sm" pattern="\d{10}" placeholder="Enter Alternate Phone Number">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  for="schoolStartDate">When is the anticipated start date of your parish Sunday School? </label>
+            <input type="date" name="schoolStartDate" data-provider="datepicker" class="form-control form-control-sm" formControlName="schoolStartDate" id='datetimepicker'
+                style="width: 100%; background-color:#fff;height: calc(1.5em + .75rem + 2px);border:1px solid #ced4da;">
+        </div>
+
+        <div id="orderDetails" class="container borderStyle mt-4 mb-3">
+            <h6 class="border-with-text bg-light" style="font-size: 1.1rem;">Order Details</h6>
+
+            <div class="form-group row">
+                <label for="gestureNo" class="col">Gestures of the Liturgy Booklet</label>
+                <input type="number" formControlName="gestureNo" class="form-control form-control-sm col mr-2" placeholder="Enter No of Books">
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="preKgBooks" class="col">Pre-KG Books</label>
+                    <input type="number" formControlName="preKgBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="KGBooks" class="col">KG Books</label>
+                    <input type="number" formControlName="KGBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="firstBooks" class="col">1st Grade Books</label>
+                    <input type="number" formControlName="firstBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="secondBooks" class="col">2nd Grade Books</label>
+                    <input type="number" formControlName="secondBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="thirdBooks" class="col">3rd Grade Books</label>
+                    <input type="number" formControlName="thirdBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="fourthBooks" class="col">4th Grade Books</label>
+                    <input type="number" formControlName="fourthBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="fifthBooks" class="col">5th Grade Books</label>
+                    <input type="number" formControlName="fifthBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="sixthBooks" class="col">6th Grade Books</label>
+                    <input type="number" formControlName="sixthBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="seventhBooks" class="col">7th Grade Books</label>
+                    <input type="number" formControlName="seventhBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="eighthBooks" class="col">8th Grade Books</label>
+                    <input type="number" formControlName="eighthBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="ninethBooks" class="col">9th Grade Books</label>
+                    <input type="number" formControlName="ninethBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="tenthBooks" class="col">10th Grade Books</label>
+                    <input type="number" formControlName="tenthBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col row">
+                    <label for="eleventhBooks" class="col-sm">11th Grade Books</label>
+                    <input type="number" formControlName="eleventhBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+                <div class="form-group col row">
+                    <label for="twelthBooks" class="col-sm">12th Grade Books</label>
+                    <input type="number" formControlName="twelthBooks" class="form-control form-control-sm col-sm-5 mr-2" placeholder="No of Books">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments" >Additional Comments or Needs</label>
+                <textarea formControlName="comments" class="form-control form-control-sm" placeholder="Enter Additional Comments or Needs"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group text-right">
+            <button [disabled]="!textbookOrderForm.valid" (click)="onSubmit()" class="btn btn-blue btn-success">
+                Register
+            </button>
+        </div>
+    </form>
+</div>

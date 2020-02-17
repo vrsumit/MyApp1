@@ -1,0 +1,356 @@
+<div class="container-fluid">
+  <!--*****************************Navbar***********************************-->
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:brown;">
+    <h3 class="navbar-brand" style="font-style:italic; color:antiquewhite;">Portal</h3>
+    <ul class="nav navbar-nav">
+      <li class="active nav-item"><a class="nav-link" href="#">Resources</a></li>
+      <li class="active nav-item"><a class="nav-link" href="#">Useful Links</a></li>
+      <li class="active nav-item"><a class="nav-link" href="#">TRAINING</a></li>
+      <li class="nav-item dropdown">
+        <a class=" active nav-link dropdown-toggle" data-toggle="dropdown" href="#">UPLOAD FILE</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUpload">Errata</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUpload">Teacher's Notes</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUpload">Activities</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUpload">Worksheets</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalUpload">Review Questions</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!--*****************************Sidebar***********************************-->
+  <div class="row" id="body-row" style="margin-right:0px;">
+    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+
+      <ul class="list-group">
+
+        <!--<li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                <small>MAIN MENU</small>
+            </li>-->
+
+        <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-start align-items-center">
+            <span class="fa fa-dashboard fa-fw mr-3"></span>
+            <span class="menu-collapsed">Errata</span>
+            <span class="submenu-icon ml-auto"></span>
+          </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu1' class="collapse sidebar-submenu">
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">Pre-KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">1st</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">2nd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">3rd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">4th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">5th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">6th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">7th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">8th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">9th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">10th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">11th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">12th</span>
+          </a>
+        </div>
+
+        <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-start align-items-center">
+            <span class="fa fa-dashboard fa-fw mr-3"></span>
+            <span class="menu-collapsed">Teacher's Notes</span>
+            <span class="submenu-icon ml-auto"></span>
+          </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu2' class="collapse sidebar-submenu">
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">Pre-KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">1st</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">2nd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">3rd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">4th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">5th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">6th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">7th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">8th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">9th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">10th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">11th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">12th</span>
+          </a>
+        </div>
+
+        <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-start align-items-center">
+            <span class="fa fa-dashboard fa-fw mr-3"></span>
+            <span class="menu-collapsed">Activities</span>
+            <span class="submenu-icon ml-auto"></span>
+          </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu3' class="collapse sidebar-submenu">
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">Pre-KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">1st</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">2nd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">3rd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">4th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">5th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">6th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">7th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">8th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">9th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">10th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">11th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">12th</span>
+          </a>
+        </div>
+
+        <a href="#submenu4" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-start align-items-center">
+            <span class="fa fa-dashboard fa-fw mr-3"></span>
+            <span class="menu-collapsed">Worksheets</span>
+            <span class="submenu-icon ml-auto"></span>
+          </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu4' class="collapse sidebar-submenu">
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">Pre-KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">1st</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">2nd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">3rd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">4th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">5th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">6th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">7th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">8th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">9th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">10th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">11th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">12th</span>
+          </a>
+        </div>
+
+        <a href="#submenu5" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-start align-items-center">
+            <span class="fa fa-dashboard fa-fw mr-3"></span>
+            <span class="menu-collapsed">Review Questions</span>
+            <span class="submenu-icon ml-auto"></span>
+          </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu5' class="collapse sidebar-submenu">
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">Pre-KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">KG</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">1st</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">2nd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">3rd</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">4th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">5th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">6th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">7th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">8th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">9th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">10th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">11th</span>
+          </a>
+          <a routerLink="#masterId" (click)="view($event)" class="list-group-item list-group-item-action bg-dark text-white">
+            <span class="menu-collapsed">12th</span>
+          </a>
+        </div>
+      </ul>
+    </div>
+
+    <div id="masterId" class="myDiv col" style="display:none">
+      <h5 class="mt-3">More information regarding our curriculum is available through the following links:</h5>
+      <ul class="mt-3">
+            <li><a href="#" >Lesson 1</a></li>
+            <li><a href="#" >Lesson 2</a></li>
+            <li><a href="#" >Lesson 3</a></li>
+            <li><a href="#">Lesson 4</a></li>
+            <li><a href="#" >Lesson 5</a></li>
+            <li><a href="#" >Lesson 6</a></li>
+            <li><a href="#" >Lesson 7</a></li>
+            <li><a href="#">Lesson 8</a></li>
+            <li><a href="#" >Lesson 9</a></li>
+            <li><a href="#" >Lesson 10</a></li>
+            <li><a href="#" >Lesson 11</a></li>
+            <li><a href="#">Lesson 12</a></li>
+            <li><a href="#" >Lesson 13</a></li>
+            <li><a href="#" >Lesson 14</a></li>
+            <li><a href="#" >Lesson 15</a></li>
+            <li><a href="#">Lesson 16</a></li>
+          </ul>
+    </div>
+  </div>
+
+  <!--*****************************Modal box***********************************-->
+
+
+  <div id="modalUpload" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Upload PDF/Audio/Video File Here</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        <div class="modal-body">
+          <div class="col">
+            <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+            <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()">Upload</button>
+            <!--[disabled]="!uploader.getNotUploadedItems().length"-->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--*****************************Master Div***********************************-->
+
+  <!--<div id="masterId" class="myDiv">
+sanakdjslkfcmls;dxklv;xc,b v;cl bv vcbvc
+fcbvbnvnvbnbvm
+</div>-->
+
+</div>

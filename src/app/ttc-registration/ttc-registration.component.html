@@ -1,0 +1,102 @@
+<div class="container col-md-6 col-sm-6 border mt-2rem mb-1rem card p-3 bg-light">
+
+    <div>
+        <h3 class="text-center header-blue"> TTC Registration </h3>
+        <!-- <h3 class="text-center" style="color:purple;"> TTC Registration Form </h3> -->
+        <!-- <p>Please fill completely the name of the teacher, telephone # and email address. Please take care in giving the email
+            address correctly.</p>
+        <hr class="border-dark"> -->
+    </div>
+
+    <form id="subscribeForm" [formGroup]="TTCregistrationForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="pname">Parish Name:</label>
+            <input type="text" class="form-control form-control-sm" id="pname" formControlName="pname" placeholder="Enter Parish Name">
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <label for="addr">Parish Address:</label>
+        <div class="row">
+            <div class="form-group  col-12">
+                <input type="text" class="form-control form-control-sm" placeholder="Enter Your Address">
+                <!-- <label>Street Address</label> -->
+            </div>
+            <div class="form-group  col-12">
+                <input type="text" class="form-control form-control-sm" placeholder="Enter Your Landmark">
+                <!-- <label>Landmark</label> -->
+            </div>
+            <div class="form-group col-6">
+                <input type="text" class="form-control form-control-sm" placeholder="Enter Your City">
+                <!-- <label>City</label> -->
+            </div>
+            <div class="form-group col-6">
+                <input type="text" class="form-control form-control-sm" placeholder="Enter Your State">
+                <!-- <label>State</label> -->
+            </div>
+            <div class="form-group col-6">
+                <input type="text" class="form-control form-control-sm" placeholder="Enter Your Zip code">
+                <!-- <label>Postal/Zip Code</label> -->
+            </div>
+            <div class="form-group col-6">
+                <select class="form-control form-control-sm">
+                    <option>India</option>
+                    <option>England</option>
+                    <option>Australia</option>
+                </select>
+                <!-- <label>Country</label> -->
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="" for="prname">Name of Principal:</label>
+            <input type="text" class="form-control form-control-sm" id="prname" formControlName="prname" placeholder="Enter Principal's' Name">
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label class="" for="vname">Name of Vicar:</label>
+            <input type="text" class="form-control form-control-sm" id="vname" formControlName="vname" placeholder="Enter Vicar Name">
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="pemail">Principal's Email Address:</label>
+            <input type="email" class="form-control form-control-sm" id="pemail" formControlName="pemail" [ngClass]="{'is-invalid': submitted && f.pemail.errors}"
+                placeholder="Enter Principal's Email ID" required>
+            <div *ngIf="submitted && f.pemail.errors" class="invalid-feedback">
+                <div *ngIf="f.pemail.errors.required">Email is required</div>
+                <div *ngIf="f.pemail.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="mobile1">Principal's Contact Number: </label>
+            <input type="text" formControlName="mobile1" class="form-control form-control-sm" placeholder="Enter Principal's Contact Number">
+            <!-- <label>Area code</label> -->
+        </div>
+        <div class="form-group">
+            <label class="" for="vname">Name of Teacher:</label>
+            <input type="text" class="form-control form-control-sm" id="sname" formControlName="sname" placeholder="Enter Student's' Name">
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="phonenum1">Teacher's Phone Number: </label>
+            <input type="text" min="-999" max="999" maxlength=3 formControlName="phonenum1" class="form-control form-control-sm" placeholder="Enter Teacher's Contact Number">
+            <!-- <label>Area code</label> -->
+        </div>
+        <div class="form-group">
+            <label for="semail">Teacher's Email Address:</label>
+            <input type="email" class="form-control form-control-sm" id="semail" formControlName="semail" [ngClass]="{'is-invalid': submitted && f.semail.errors}"
+                placeholder="Enter Student's Email ID" required>
+            <div *ngIf="submitted && f.semail.errors" class="invalid-feedback">
+                <div *ngIf="f.semail.errors.required">Student's Email is required</div>
+                <div *ngIf="f.semail.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <div class="form-group w-50">
+            <label for="sele1">Select Exam Date</label>
+            <select formControlName="group" class="form-control form-control-sm" id="sele1">
+                <option>22/12/2019</option>
+                <option>01/01/2020</option>
+                <option>13/04/2020</option>
+                <option>28/07/2020</option>
+            </select>
+        </div>
+        <button type="submit" (click)="register()" class="btn btn-blue btn-primary float-right">Register</button>
+    </form>
+</div>

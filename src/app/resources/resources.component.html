@@ -1,0 +1,509 @@
+<!-- <div class="row" style="padding: 10%;">
+  <div class="col-sm-4">
+    <div class="card bg-light mb-3" style="max-width: 18rem;height: 16rem;">
+      <div class="card-header cardHeaderColor d-flex justify-content-center">Resources</div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center" style="margin-top: 12%;">
+          <i aria-hidden="true" class="fa fa-user fa-5x "></i>
+        </div>
+        <span class="card-text d-flex justify-content-center">Search for resources</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card bg-light mb-3" style="max-width: 18rem;height: 16rem;">
+      <div class="card-header cardHeaderColor d-flex justify-content-center">Useful Links</div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center" style="margin-top: 12%;">
+          <i class="fa fa-bookmark fa-5x" aria-hidden="true"></i>
+        </div>
+        <span class="card-text d-flex justify-content-center">Find useful links</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card bg-light mb-3" style="max-width: 18rem;height: 16rem;">
+      <div class="card-header cardHeaderColor d-flex justify-content-center">TRAINING</div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center" style="margin-top: 12%;">
+          <i aria-hidden="true" class="fa fa-users fa-5x "></i>
+        </div>
+        <span class="card-text d-flex justify-content-center">Find cources</span>
+      </div>
+    </div>
+  </div>
+</div> -->
+<nav id="portalNavId" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="background-color: #395c80!important;">
+  <a class="navbar-brand" href="#">CHURCH</a>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/portal']">DASHBOARD</a>
+      </li>
+      <li class="active nav-item">
+        <a class="nav-link" href="javascript:void(0);" (click)="showPeople()">PEOPLE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/events']">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/links']">COMPETITION/EXAMS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/training']">TRAINING</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          UPLOAD FILE
+        </a>
+        <div class="dropdown-menu fontFam">
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Errata</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Teacher's Notes</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Activities</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Worksheets</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Review Questions</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a style="margin-left: -21%;" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">
+          <i class="fa fa-bell fa-2x" aria-hidden="true"></i>(
+          <b>2</b>)
+          <i aria-hidden="true" class="fa fa-user fa-2x" style="margin-left: 10%;"></i>
+        </a>
+        <ul class="dropdown-menu notify-drop fontFam" style="margin-left: -155%;">
+          <div class="notify-drop-title">
+            <h6 class="text-center">You have 2 notifications</h6>
+          </div>
+          <div class="notify-drop-footer text-center">
+            <a class="dropdown-item" href="" data-toggle="modal" data-target="#modalNotify">
+              <u>
+                <i> 1.User 1 uploded pdf for lesson 2 </i>
+              </u>
+            </a>
+          </div>
+          <div class="notify-drop-footer text-center">
+            <a class="dropdown-item" href="" data-toggle="modal" data-target="#modalNotify">
+              <u>
+                <i>2.User 1 uploded pdf for lesson 2</i>
+              </u>
+            </a>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="" style="padding-top: 6rem;">
+  <div class="row d-none pd-wrapper">
+    <div class="col-sm-4">
+      <div class="card cardBorder" style="width: 18rem;">
+        <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Image cap [100%x180]" src="assets/m1.jpg" data-holder-rendered="true"
+          style="height: 180px;width: 100%;display: block;">
+        <div class="card-body">
+          <h3 class="card-title">Frodo Baggins</h3>
+          <p>Teacher</p>
+          <div>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span class="pl5">(616) 555-5555</span>
+          </div>
+          <div>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <span class="pl5">kausten@example.com</span>
+          </div>
+          <div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span class="pl5">11 Sheldon Ave NE Grand Rapids, MI 49503</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card cardBorder" style="width: 18rem;">
+        <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Image cap [100%x180]" src="assets/w2.jpg" data-holder-rendered="true"
+          style="height: 180px;width: 100%;display: block;">
+        <div class="card-body">
+          <h3 class="card-title">Kate Austen</h3>
+          <p>Member</p>
+          <div>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span class="pl5">(616) 555-5555</span>
+          </div>
+          <div>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <span class="pl5">kausten@example.com</span>
+          </div>
+          <div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span class="pl5">11 Sheldon Ave NE Grand Rapids, MI 49503</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card cardBorder" style="width: 18rem;">
+        <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Image cap [100%x180]" src="assets/m2.jpg" data-holder-rendered="true"
+          style="height: 180px;width: 100%;display: block;">
+        <div class="card-body">
+          <h3 class="card-title">Phillip Halpert</h3>
+          <p>Priest</p>
+          <div>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span class="pl5">(616) 555-5555</span>
+          </div>
+          <div>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <span class="pl5">kausten@example.com</span>
+          </div>
+          <div>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span class="pl5">11 Sheldon Ave NE Grand Rapids, MI 49503</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pl-wrapper mb-5">
+    <div class="total-people">10 People</div>
+    <div>
+      <table class="p-table">
+        <tbody>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" (click)="openPerson(1)" class="link-blue">Austen, Kate</a>
+              </div>
+              <div class="mt-0_5em fw-500">Female (20)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Baggins, Frodo</a>
+              </div>
+              <div class="mt-0_5em fw-500">Male (22)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Boseman, Chadwick</a>
+              </div>
+              <div class="mt-0_5em fw-500">Male (30)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Bourne, Alison</a>
+              </div>
+              <div class="mt-0_5em fw-500">Female (20)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Bourne, Jason</a>
+              </div>
+              <div class="mt-0_5em fw-500">Male (19)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Bourne, Marie</a>
+              </div>
+              <div class="mt-0_5em fw-500">Female (21)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Flintstone, Fred</a>
+              </div>
+              <div class="mt-0_5em fw-500">Male (22)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(2)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" (click)="openPerson(2)" class="link-blue">Flintstone, Pebbles</a>
+              </div>
+              <div class="mt-0_5em fw-500">Female (23)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(2)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Flintstone, Wilma</a>
+              </div>
+              <div class="mt-0_5em fw-500">Female (24)</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(2)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i aria-hidden="true" class="fa fa-user"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Halpert, Cecelia</a>
+              </div>
+              <div class="mt-0_5em fw-500">Female (26)</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="flag1" class="per-wrapper mb-5">
+    <div class="per-profile-top">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="https://files.breezechms.com/img/profiles/upload/5b743818d7771.jpg" class="per-profile">
+        </div>
+        <div class="col-sm-8">
+          <h3 class="person-name">Kate Austen</h3>
+          <div class="person-details">
+            <div class="person-details-item">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span class="pl5">(616) 555-5555</span>
+            </div>
+            <div class="person-details-item">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <span class="pl5">kausten@example.com</span>
+            </div>
+            <div class="person-details-item">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span class="pl5">11 Sheldon Ave NE Grand Rapids, MI 49503</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row person-secondary-details">
+      <div class="col">
+        <h4 class="person-secondary-details-head">Main</h4>
+        <table class="table no_border table-condensed person_details per-table">
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Kate Austen</td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>Female</td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Member</td>
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td>35 Years Old
+                <br>
+                <span class="birthdate">August 21, 1984</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h4 class="person-secondary-details-head">Contact</h4>
+        <table class="table no_border table-condensed person_details per-table">
+          <tbody>
+            <tr>
+              <td>Mobile</td>
+              <td>(616) 555-5555</td>
+            </tr>
+            <tr>
+              <td>Home</td>
+              <td>(616) 555-5555</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>kausten@example.com</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>11 Sheldon Ave NE Grand Rapids, MI 49503
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="flag2" class="per-wrapper mb-5">
+      <div class="per-profile-top">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="https://files.breezechms.com/img/profiles/upload/5b743818d7771.jpg" class="per-profile">
+          </div>
+          <div class="col-sm-8">
+            <h3 class="person-name">Pebbles Flintstone</h3>
+            <div class="person-details">
+              <div class="person-details-item">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span class="pl5">(616) 555-5555</span>
+              </div>
+              <div class="person-details-item">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span class="pl5">p.flintstone@example.com</span>
+              </div>
+              <div class="person-details-item">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span class="pl5">11 Sheldon Ave NE Grand Rapids, MI 49503</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row person-secondary-details">
+        <div class="col">
+          <h4 class="person-secondary-details-head">Main</h4>
+          <table class="table no_border table-condensed person_details per-table">
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>Pebbles Flintstone</td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td>Female</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>Member</td>
+              </tr>
+              <tr>
+                <td>Age</td>
+                <td>35 Years Old
+                  <br>
+                  <span class="birthdate">August 21, 1984</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col">
+          <h4 class="person-secondary-details-head">Contact</h4>
+          <table class="table no_border table-condensed person_details per-table">
+            <tbody>
+              <tr>
+                <td>Mobile</td>
+                <td>(616) 555-5555</td>
+              </tr>
+              <tr>
+                <td>Home</td>
+                <td>(616) 555-5555</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>p.flintstone@example.com</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>11 Sheldon Ave NE Grand Rapids, MI 49503
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+<div id="modalUpload" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Upload PDF/Audio/Video File Here</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+        <div class="col">
+          <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+          <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()">Upload</button>
+          <!--[disabled]="!uploader.getNotUploadedItems().length"-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="modalNotify" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:lavender">
+        <h6>You can Approve/Delete uploded files here.</h6>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+        <div class="col">
+          <div class="row ">
+            <h6 class="text-center">
+              <a href="/lesson">View Content</a>
+            </h6>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()">Approve</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-success btn-s " (click)="onButtonClick($event)">Delete</button>
+            </div>
+
+          </div>
+          <div id="commentId" class="hide mt-1 row">
+
+            <textarea class="form-control mt-4" rows="3" placeholder="Comment here.."></textarea>
+            <br>
+            <button type="button" class="btn btn-success" style="margin-top: -2%;">Notify</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="height: 3rem">
+        <button type="button" class="btn btn-default" style="background-color:lavender" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

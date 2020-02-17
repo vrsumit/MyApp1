@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    /* font-family: Helvetica, Arial, sans-serif !important; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px !important;
+}
+
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .fontFam {
+    font-family: Helvetica, Arial, sans-serif !important;
+      font-size: 13px !important;
+  }
+  
+  .mt-5rem{
+    margin-top: 6rem !important;
+}
+
+
+
+.mt-5rem{
+    margin-top: 6rem !important;
+}
+.mt-2rem{
+    margin-top: 2rem !important;
+}
+.mb-1rem{
+    margin-bottom: 1.5rem !important;
+}
+
+.btn-blue{
+    background-color: #395c80 !important;
+    color: white;
+    border-color: #395c80;
+}
+
+.link-blue{
+    color: #395c80 !important;
+}
+
+.header-blue{
+    color: #395c80 !important;
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}

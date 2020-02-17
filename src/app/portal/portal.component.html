@@ -1,0 +1,164 @@
+<nav id="portalNavId" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="background-color: #395c80!important;">
+  <a class="navbar-brand" href="#">CHURCH</a>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/portal']">DASHBOARD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/resources']">PEOPLE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/events']">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/links']">COMPETITION/EXAMS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/training']">TRAINING</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          UPLOAD FILE
+        </a>
+        <div class="dropdown-menu fontFam">
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Errata</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Teacher's Notes</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Activities</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Worksheets</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Review Questions</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a style="margin-left: -21%;" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">
+          <i class="fa fa-bell fa-2x" aria-hidden="true"></i>(
+          <b>2</b>)
+          <i aria-hidden="true" class="fa fa-user fa-2x" style="margin-left: 10%;"></i>
+        </a>
+        <ul class="dropdown-menu notify-drop fontFam" style="margin-left: -155%;">
+          <div class="notify-drop-title">
+            <h6 class="text-center">You have 2 notifications</h6>
+          </div>
+          <div class="notify-drop-footer text-center">
+            <a class="dropdown-item" href="" data-toggle="modal" data-target="#modalNotify">
+              <u>
+                <i> 1.User 1 uploded pdf for lesson 2 </i>
+              </u>
+            </a>
+          </div>
+          <div class="notify-drop-footer text-center">
+            <a class="dropdown-item" href="" data-toggle="modal" data-target="#modalNotify">
+              <u>
+                <i>2.User 1 uploded pdf for lesson 2</i>
+              </u>
+            </a>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="row" style="padding: 10%;">
+  <div class="col-sm-4">
+    <div class="card bg-light mb-3" style="max-width: 18rem;height: 16rem;" (click)="navigate(1)">
+      <div class="card-header cardHeaderColor d-flex justify-content-center">PEOPLE</div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center mt-4">
+          <i aria-hidden="true" class="fa fa-user fa-5x "></i>
+        </div>
+        <span class="card-text d-flex justify-content-center">Search for PEOPLE</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card bg-light mb-3" style="max-width: 18rem;height: 16rem;" (click)="navigate(3)">
+      <div class="card-header cardHeaderColor d-flex justify-content-center">EVENTS</div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center mt-4">
+          <i class="fa fa-calendar fa-5x" aria-hidden="true"></i>
+        </div>
+        <span class="card-text d-flex justify-content-center">Find Events</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card bg-light mb-3" style="max-width: 18rem;height: 16rem;" (click)="navigate(2)">
+      <div class="card-header cardHeaderColor d-flex justify-content-center">COMPETITION/EXAMS</div>
+      <div class="card-body">
+        <div class="d-flex justify-content-center mt-4">
+          <i class="fa fa-book fa-5x" aria-hidden="true"></i>
+        </div>
+        <span class="card-text d-flex justify-content-center">Find Competition/Exams</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalUpload" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Upload PDF/Audio/Video File Here</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+        <div class="col">
+          <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+          <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()">Upload</button>
+          <!--[disabled]="!uploader.getNotUploadedItems().length"-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="modalNotify" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:lavender">
+        <h6>You can Approve/Delete uploded files here.</h6>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+
+        <div class="col">
+          <div class="row ">
+            <h6 class="text-center">
+              <a href="/lesson">View Content</a>
+            </h6>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <button type="button" class="btn btn-success btn-s" (click)="uploader.uploadAll()">Approve</button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-success btn-s " (click)="onButtonClick($event)">Delete</button>
+            </div>
+
+          </div>
+          <div id="commentId" class="hide mt-1 row">
+
+            <textarea class="form-control mt-4" rows="3" placeholder="Comment here.."></textarea>
+            <br>
+            <button type="button" class="btn btn-success" style="margin-top: -2%;">Notify</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="height: 3rem">
+        <button type="button" class="btn btn-default" style="background-color:lavender" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

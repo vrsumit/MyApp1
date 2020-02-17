@@ -1,0 +1,106 @@
+#l-content .m-inlineImage {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    
+}
+	  
+	  .col_2 p {
+	  text-align: center;
+	  
+	  }
+	  .col_2 p a img {
+	  display: inline-block; 
+	  margin-left: auto; 
+	  margin-right: auto;
+	  }
+	  
+	
+	  
+	 .btn.solid {
+	  border: 1px solid #eda300;
+	  border-radius: 6px;
+	  }
+	 
+	  
+	  a.btn.solid {
+	  /* width: 20%; */
+	  background-color: #A6B12F;
+      border: 1px solid #A6B12F;
+      color: #fff;
+	  }
+	  
+	  .cta a.btn.solid {
+	  width: 100%;
+	  }
+	  @media (max-width: 800px) {
+	  div.col_3.cta, a.btn.solid {
+	  width: 100%;
+	  }
+	  }
+	 a.btn.solid:hover {
+	  background-color: #7e8624;
+	  }
+	  
+	  a.solid i {
+	  margin-top: 5px;
+	  }
+	  
+	  #l-content .l-main div.rome-story img {
+	  border-bottom: 5px solid rgb(0, 134, 193);
+	  
+	  }
+	  .quote img {
+	  display: block;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+	  border: none !important;
+	  }
+	  
+	  #l-content .l-main div.rome-story h3 {
+	  margin-top: 5px;
+	  padding-top: 0;
+	  }
+    #l-content .l-main div.rome-story h3 a {
+	  font-family: 'Oswald', sans-serif;
+	  text-decoration: none;
+	  }
+	  
+	  .careers li{
+	  font-style: italic;
+	  color: rgb(0, 134, 193);
+	  }
+	  .careers li i {
+	  color: #0F3A71;
+	  }
+	  
+	  .commitment li {
+	  font-family: 'Oswald', sans-serif;
+	  text-transform: uppercase;
+	  color: rgb(0, 134, 193);
+	  font-weight: 400;
+	  }
+	  .commitment li i {
+	  color: #2e343b;
+	  
+	  }
+	 .commitment span.fa-li {top: 0;}
+	  .program {margin-bottom:10px;
+	  padding-top: 0; padding-bottom: 15px;padding-left: 15px;
+    padding-right: 15px;
+	  }
+	  
+	  .program p a {text-decoration:none !important;}
+	  .white{background-color: #fff;}
+		
+		.tp{
+            display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        }

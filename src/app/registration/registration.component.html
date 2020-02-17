@@ -1,0 +1,68 @@
+<div class="container col-6 border card p-3 bg-light mt-2rem mb-1rem" style="border:15px solid black">
+
+  <div>
+    <h3 class="text-center header-blue"> SIGN UP </h3>
+  </div>
+
+  <form [formGroup]="registrationForm">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="fname">First Name:</label>
+        <input type="text" class="form-control form-control-sm" id="fname" formControlName="fname" placeholder="Enter First Name"
+          name="fname" required>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lname">Last Name:</label>
+        <input type="text" class="form-control form-control-sm" id="lname" formControlName="lname" placeholder="Enter Last Name"
+          name="lname" required>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control form-control-sm" id="email" formControlName="email" placeholder="Enter Email" name="email"
+        required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="fname">Username:</label>
+      <input type="text" class="form-control form-control-sm" id="fname" formControlName="username" placeholder="Enter Usename"
+        name="fname" required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control form-control-sm" id="password" formControlName="password" placeholder="Enter Password"
+          name="password" required>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="cpassword">Confirm Password:</label>
+        <input type="password" class="form-control form-control-sm" id="cpassword" formControlName="cpassword" placeholder="Enter Confirm Password"
+          name="cpassword" required>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact No:</label>
+      <input type="text" class="form-control form-control-sm" id="contact" formControlName="contact" NumbersOnly placeholder="Enter Contact No"
+        name="contact" required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="yourself">About Yourself:</label>
+      <textarea rows="4" cols="50" class="form-control form-control-sm" id="yourself" formControlName="yourself" NumbersOnly placeholder="Enter About Yourself"
+        name="yourself" required></textarea>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div style="padding-top: 2%;">
+      <button [disabled]="!registrationForm.valid" type="submit" (click)="submit()" class="btn btn-blue btn-primary float-right">Register</button>
+    </div>
+    <div>
+      <button type="button" (click)="cancel()" class="btn link-blue btn-link float-right">Cancel</button>
+    </div>
+  </form>
+</div>

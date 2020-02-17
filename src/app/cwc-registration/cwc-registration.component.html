@@ -1,0 +1,173 @@
+<div class="container col-md-6 col-sm-6 border mt-2rem mb-1rem card p-3 bg-light">
+    <div>
+        <h3 class="text-center header-blue"> CWC REGISTRATION </h3>
+    </div>
+
+    <form id="subscribeForm" [formGroup]="CWCregistrationForm" (ngSubmit)="onSubmit()">
+        <label class="">Student's Name:</label>
+        <div class="row">
+            <div class="form-group col-4">
+                <input type="text" formControlName="fname" class="form-control form-control-sm" placeholder="Enter First Name" required>
+                <!-- <label for="fname">First</label> -->
+            </div>
+            <div class="form-group col-4">
+                <input type="text" class="form-control form-control-sm" id="mname" placeholder="Enter Middle Name" name="mname" required>
+                <!-- <label for="mname"> Middle</label> -->
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group col-4">
+                <input type="text" formControlName="lname" class="form-control form-control-sm" id="lname" placeholder="Enter Last Name"
+                    name="lname" required>
+                <!-- <label for="lname">Last</label> -->
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="" for="email">Email Address:</label>
+            <input type="email" class="form-control form-control-sm" id="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                placeholder="Enter Email ID" name="email" required>
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <label for="mname">Student's Middle Name:</label>
+            <input type="text" class="form-control form-control-sm" id="mname" formControlName="mname" placeholder="Enter First Name" name="mname" required>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-group">
+            <label for="lname">Student's Last Name:</label>
+            <input type="text" class="form-control form-control-sm" id="lname" formControlName="lname" placeholder="Enter Last Name" name="lname" required>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>-->
+        <div class="form-row">
+            <div class="form-group col">
+                <label for="p1">Parish Name:</label>
+                <select class="form-control form-control-sm" formControlName="p1" id="p1">
+                    <option>Select Parish Name</option>
+                    <option>Teachers</option>
+                    <option>Principals</option>
+                    <option>Staff</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="grade1">Student's Current Grade:</label>
+                <select formControlName="grade1" class="form-control form-control-sm" id="grade1">
+                    <option>Select Student's Current Grade</option>
+                    <option>Grade Pre-KG</option>
+                    <option>Grade KG</option>
+                    <option>Grade 1st</option>
+                    <option>Grade 2nd</option>
+                    <option>Grade 3rd</option>
+                    <option>Grade 4th</option>
+                    <option>Grade 5th</option>
+                    <option>Grade 6th</option>
+                    <option>Grade 7th</option>
+                    <option>Grade 8th</option>
+                    <option>Grade 9th</option>
+                    <option>Grade 10th</option>
+                    <option>Grade 11th</option>
+                    <option>Grade 12th</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="center1">Testing Center</label>
+                <select formControlName="center1" class="form-control form-control-sm" id="center1">
+                    <option>Select Testing Center</option>
+                    <option>Center 1</option>
+                    <option>Center 2</option>
+                    <option>Center 3</option>
+                    <option>Center 4</option>
+                    <option>Center 5</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label class="" for="test1">Location at which you will be testing:</label>
+                <select formControlName="test1" class="form-control form-control-sm" id="test1">
+                    <option>Select the location at which you will be testing</option>
+                    <option>Location 1</option>
+                    <option>Location 2</option>
+                    <option>Location 3</option>
+                    <option>Location 4</option>
+                    <option>Location 5</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            CWC date :
+            <input placeholder="Select date" type="date" formControlName="cwcdate" class="form-control form-control-sm datepicker">
+        </div>
+        <div class="form-group">
+            <label for="sel1">Group of the Student's Registration:</label>
+            <select formControlName="sel1" class="form-control form-control-sm" id="sel1">
+                <option>Select the Group of the Student's Registration</option>
+                <option>Group 1</option>
+                <option>Group 2</option>
+                <option>Group 3</option>
+                <option>Group 4</option>
+            </select>
+        </div>
+        <div>
+            <h5>Events</h5>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input" data-toggle="popover" data-trigger="hover" data-content="Some content"
+                    value="">Drawing ( Drawing is open to all groups )
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input" value="">Bible Quiz ( Bible Quiz is open to Groups 2-7 )
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input" value="">Essay Writing ( Essay Writing is open to Groups 4 -7 )
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input" value="">Story Writing ( Story Writing is open to Groups 4 -7 )
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input name="list" type="checkbox" class="form-check-input" value="">Poetry Writing ( Poetry is open to Groups 4 -7 )
+            </label>
+        </div>
+
+        <!--<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control form-control-sm" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+        <!--<div class="form-group">
+      <label for="contact">Contact No:</label>
+      <input type="text" class="form-control form-control-sm" id="contact" formControlName="contact" NumbersOnly placeholder="Enter Contact No"
+        name="contact" required>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>-->
+        <!--<div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" formControlName = "agree" name="remember" required> I agree.
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>-->
+        <button type="submit" (click)="submit()" class="btn btn-primary btn-blue float-right btn-primary-spacing mt-3">Register</button>
+        <!--[disabled]="!CWCregistrationForm.valid"-->
+    </form>
+</div>

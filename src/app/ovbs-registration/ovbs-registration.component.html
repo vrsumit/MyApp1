@@ -1,0 +1,231 @@
+<div class="container col-md-6 col-sm-6 border p-3 mt-2rem bg-light mb-1rem" style="overflow:auto;">
+    <div>
+        <h3 class="text-center header-blue">OVBS Registration</h3>
+    </div>
+    <form [formGroup]="ovbsRegisterForm">
+        <div class="form-group">
+            <label for="churchName" class="">Church Name</label>
+            <input type="text" formControlName="churchName" class="form-control form-control-sm" placeholder="Enter Church Name">
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="ovbsLoc" class="">OVBS Location</label>
+                <input type="text" formControlName="ovbsLoc" class="form-control form-control-sm" placeholder="Enter OVBS Location">
+            </div>
+
+            <div class="form-group col">
+                <label for="parishName" class="">Name of Parish</label>
+                <input type="text" formControlName="parishName" class="form-control form-control-sm" placeholder="Enter Name of Parish">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="parentName" class="">Parent/ Guardian Name</label>
+            <input type="text" formControlName="parentName" class="form-control form-control-sm" placeholder="Enter Parent/ Guardian Name">
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="phNo" class="">Phone Number</label>
+                <input type="number" formControlName="phNo" class="form-control form-control-sm" pattern="\d{10}" placeholder="Enter Phone Number">
+            </div>
+
+            <div class="form-group col">
+                <label for="email" class="">Email Address </label>
+                <input type="email" formControlName="email" class="form-control form-control-sm" placeholder="Enter Email Address">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="emargencyName" class="">Emergency Contact Name</label>
+                <input type="text" formControlName="emargencyName" class="form-control form-control-sm" placeholder="Enter Emergency Contact Name">
+            </div>
+
+            <div class="form-group col">
+                <label for="emargencyPh" class="">Emergency Contact Phone</label>
+                <input type="number" formControlName="emargencyPh" class="form-control form-control-sm" pattern="\d{10}" placeholder="Enter Emergency Contact Phone">
+            </div>
+        </div>
+
+        <div id="childInfo" class="container borderStyle mt-3 mb-3">
+            <h6 class="border-with-text bg-light">CHILD 1</h6>
+            <div class="form-group">
+                <label class="">Student Name</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" formControlName="firstName" class="form-control form-control-sm col" placeholder="First Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" formControlName="middleName" class="form-control form-control-sm col" placeholder="Middle Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" formControlName="lastName" class="form-control form-control-sm col" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="regType">Registration Type</label>
+                    <select class="form-control form-control-sm" formControlName="regType" id="regType">
+                        <option>Student</option>
+                        <option>Volunteer</option>
+                        <option>Teacher</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label for="grade">Grade</label>
+                    <select class="form-control form-control-sm" formControlName="grade" id="grade">
+                        <option>KG</option>
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                        <option>4th</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="age" class="">Age</label>
+                    <input type="number" formControlName="age" class="form-control form-control-sm" placeholder="Enter Age">
+                </div>
+                <div class="form-group col">
+                    <label for="day_date">Days Attending/ Dates</label>
+                    <select class="form-control form-control-sm" formControlName="day_date" id="day_date">
+                        <option>Monday-10 Feb 2020</option>
+                        <option>Tuesday-11 Feb 2020</option>
+                        <option>Wednesday-12 Feb 2020</option>
+                        <option>Thursday-13 Feb 2020</option>
+                        <option>Friday-14 Feb 2020</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col">
+                    <label for="TshirtSize">T-Shirt Size</label>
+                    <select class="form-control form-control-sm" formControlName="TshirtSize" id="TshirtSize" placeholder="Select T-Shirt Size for parent">
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label for="tshirtQuantity" class="">T-shirt Quantity</label>
+                    <input type="number" formControlName="tshirtQuantity" class="form-control form-control-sm" pattern="\d{1}" placeholder="Enter T-shirt Quantity">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="alergies" class="">Alergies</label>
+                <input type="text" formControlName="alergies" class="form-control form-control-sm" placeholder="About Alergies if any">
+            </div>
+
+        </div>
+
+
+        <div id="child2Info" class="container borderStyle mb-3">
+            <h6 class="border-with-text bg-light">CHILD 2</h6>
+            <div class="form-group">
+                <label class="">Student Name</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" formControlName="firstName" class="form-control form-control-sm col" placeholder="First Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" formControlName="middleName" class="form-control form-control-sm col" placeholder="Middle Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" formControlName="lastName" class="form-control form-control-sm col" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="regType">Registration Type</label>
+                    <select class="form-control form-control-sm" formControlName="regType" id="regType">
+                        <option>Student</option>
+                        <option>Volunteer</option>
+                        <option>Teacher</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label for="grade">Grade</label>
+                    <select class="form-control form-control-sm" formControlName="grade" id="grade">
+                        <option>KG</option>
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                        <option>4th</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="age" class="">Age</label>
+                    <input type="number" formControlName="age" class="form-control form-control-sm" placeholder="Enter Age">
+                </div>
+                <div class="form-group col">
+                    <label for="day_date">Days Attending/ Dates</label>
+                    <select class="form-control form-control-sm" formControlName="day_date" id="day_date">
+                        <option>Monday-10 Feb 2020</option>
+                        <option>Tuesday-11 Feb 2020</option>
+                        <option>Wednesday-12 Feb 2020</option>
+                        <option>Thursday-13 Feb 2020</option>
+                        <option>Friday-14 Feb 2020</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col">
+                    <label for="TshirtSize">T-Shirt Size</label>
+                    <select class="form-control form-control-sm" formControlName="TshirtSize" id="TshirtSize" placeholder="Select T-Shirt Size for parent">
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>XL</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label for="tshirtQuantity" class="">T-shirt Quantity</label>
+                    <input type="number" formControlName="tshirtQuantity" class="form-control form-control-sm" pattern="\d{1}" placeholder="Enter T-shirt Quantity">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="alergies" class="">Alergies</label>
+                <input type="text" formControlName="alergies" class="form-control form-control-sm" placeholder="About Alergies if any">
+            </div>
+
+        </div>
+        <!-- <div class="row mb-4">
+            <div class="ml-3">
+                <button type="button" class="btn btn-success btn-s " (click)="onAddButtonClick($event)">Add</button>
+            </div>
+            <div class="ml-2">
+                <button type="button" id="remove" class="hide" (click)="onRemoveButtonClick($event)">Remove</button>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="form-group col">
+                <label for="parentTshirtSize">T-Shirt Size for parent</label>
+                <select class="form-control form-control-sm" formControlName="parentTshirtSize" id="parentTshirtSize" placeholder="Select T-Shirt Size for parent">
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>XL</option>
+                </select>
+            </div>
+            <div class="form-group col">
+                <label for="parentTshirtQuantity" class="">T-shirt Quantity</label>
+                <input type="number" formControlName="parentTshirtQuantity" class="form-control form-control-sm" pattern="\d{1}" placeholder="Enter T-shirt Quantity">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button [disabled]="!ovbsRegisterForm.valid" (click)="onSubmit()" class="btn btn-blue btn-success ml-4 float-right"> Register
+            </button>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,302 @@
+<nav id="portalNavId" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="background-color: #395c80!important;">
+  <a class="navbar-brand" href="#">CHURCH</a>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/portal']">DASHBOARD</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/resources']">PEOPLE</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:void(0);" (click)="showEvents(1)">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/links']">COMPETITION/EXAMS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/training']">TRAINING</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          UPLOAD FILE
+        </a>
+        <div class="dropdown-menu fontFam">
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Errata</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Teacher's Notes</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Activities</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Worksheets</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#modalUpload">Review Questions</a>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a style="margin-left: -21%;" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button">
+          <i class="fa fa-bell fa-2x" aria-hidden="true"></i>(
+          <b>2</b>)
+          <i aria-hidden="true" class="fa fa-user fa-2x" style="margin-left: 10%;"></i>
+        </a>
+        <ul class="dropdown-menu notify-drop fontFam" style="margin-left: -155%;">
+          <div class="notify-drop-title">
+            <h6 class="text-center">You have 2 notifications</h6>
+          </div>
+          <div class="notify-drop-footer text-center">
+            <a class="dropdown-item" href="" data-toggle="modal" data-target="#modalNotify">
+              <u>
+                <i> 1.User 1 uploded pdf for lesson 2 </i>
+              </u>
+            </a>
+          </div>
+          <div class="notify-drop-footer text-center">
+            <a class="dropdown-item" href="" data-toggle="modal" data-target="#modalNotify">
+              <u>
+                <i>2.User 1 uploded pdf for lesson 2</i>
+              </u>
+            </a>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="" style="padding-top: 6rem;">
+  <div class="pl-wrapper mb-5">
+    <div class="total-people">5 Events</div>
+    <div>
+      <table class="p-table">
+        <tbody>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" (click)="openPerson(1)" class="link-blue">Sunday Service</a>
+              </div>
+              <div class="mt-0_5em fw-500">20th Feb 2020</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Centralized Writting Competition</a>
+              </div>
+              <div class="mt-0_5em fw-500">25th Feb 2020</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(1)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Children's Church</a>
+              </div>
+              <div class="mt-0_5em fw-500">5th March 2020</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(2)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" (click)="openPerson(2)" class="link-blue">Teachers Training</a>
+              </div>
+              <div class="mt-0_5em fw-500">29th Feb 2020</div>
+            </td>
+          </tr>
+          <tr [ngClass]="setClasses(2)">
+            <td class="">
+              <div class="pull-left mr-3 mt-0_5em p-icon">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+              </div>
+              <div class="pull-left p-name e-width">
+                <a href="javascript:void(0);" class="link-blue">Worship with Communion</a>
+              </div>
+              <div class="mt-0_5em fw-500">20th March 2020</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="flag1" class="per-wrapper mb-5">
+    <div class="per-profile-top">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="person-name">Sunday Service</h4>
+        </div>
+        <div class="col-sm-6">
+          <div class="person-details">
+            <div class="person-details-item">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span class="pl5">20th Jan 2020 - 24th Jan 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 e-total-att">
+        <span>Number of Attenders : 6 out of 10</span>
+      </div>
+    </div>
+    <div class="row person-secondary-details">
+      <div class="col">
+        <table class="table no_border table-condensed person_details per-table">
+          <thead>
+            <th class="e-border-none">Attenders</th>
+            <th class="e-border-none">20th Jan</th>
+            <th class="e-border-none">21st Jan</th>
+            <th class="e-border-none">22nd Jan</th>
+            <th class="e-border-none">23rd Jan</th>
+            <th class="e-border-none">24th Jan</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Austen, Kate</td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-times e-no" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-times e-no" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Baggins, Frodo</td>
+              <td>
+                <i class="fa fa-times e-no" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+                <td>Boseman, Chadwick</td>
+                <td>
+                  <i class="fa fa-times e-no" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+              </tr>            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="flag2" class="per-wrapper mb-5">
+    <div class="per-profile-top">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4 class="person-name">Teachers Training</h4>
+        </div>
+        <div class="col-sm-6">
+          <div class="person-details">
+            <div class="person-details-item">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span class="pl5">31st Jan 2020 - 3rd Feb 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 e-total-att">
+        <span>Number of Attenders : 6 out of 10</span>
+      </div>
+    </div>
+    <div class="row person-secondary-details">
+      <div class="col">
+        <table class="table no_border table-condensed person_details per-table">
+          <thead>
+            <th class="e-border-none">Attenders</th>
+            <th class="e-border-none">31st Jan</th>
+            <th class="e-border-none">1st Feb</th>
+            <th class="e-border-none">2nd Feb</th>
+            <th class="e-border-none">3rd Feb</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flintstone, Pebbles</td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-times e-no" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-times e-no" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>Flintstone, Wilma</td>
+              <td>
+                <i class="fa fa-times e-no" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+              <td>
+                <i class="fa fa-check e-yes" aria-hidden="true"></i>
+              </td>
+            </tr>
+            <tr>
+                <td>Halpert, Cecelia</td>
+                <td>
+                  <i class="fa fa-times e-no" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+                <td>
+                  <i class="fa fa-check e-yes" aria-hidden="true"></i>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
