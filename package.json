@@ -60,7 +60,7 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "^2.8.0"
-  },
+  }, 
   "engines": {
     "node": "v12.16.0",
     "npm": "6.4.1"
